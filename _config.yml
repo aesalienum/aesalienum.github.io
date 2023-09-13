@@ -10,18 +10,17 @@ baseurl: ""
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: zh-CN
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: Asia/Shanghai
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
 title: "aes_alienum" # the main title
 
-tagline: >- # it will display as the sub-title
-  个人博客
+tagline: 纵浪大化中，不喜亦不惧 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   个人博客，主要包含C++、ROS等相关内容.
@@ -42,11 +41,10 @@ social:
   email: aesalienum@qq.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # - https://twitter.com/username # change to your twitter homepage
     - https://github.com/aesalienum # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.zhihu.com/people/980221lck8023
+    - https://space.bilibili.com/40029677?spm_id_from=333.1007.0.0
 
 google_site_verification: # fill in to your verification string
 
@@ -105,7 +103,7 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: true # boolean, keep empty means false
+    enabled: # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development|production]
