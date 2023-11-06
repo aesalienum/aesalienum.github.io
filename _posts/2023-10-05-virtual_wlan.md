@@ -46,7 +46,7 @@ ZeroTier是一种SD-WAN（Software-Defined Wide Area Network，软件定义广�
 
 ## 搭建过程
 
-1. 购买一个服务器，并作简单配置
+### 1. 购买一个服务器，并作简单配置
 
 服务器的作用是自建moon，因为官方提供的路由路径性能较差，所以可以通过搭建moon节点自己缩短路由路径，不是必选项。
 
@@ -65,11 +65,11 @@ ssh-copy-id -i .ssh/id_rsa.pub ${host_name}
 
 或者手动把公钥复制到服务器的~/.ssh/authorized_keys下，每个公钥占一行
 ```
-1. 官网注册一个虚拟局域网
+
+### 2. 官网注册一个虚拟局域网
 
 
-
-3. 本地和服务器都安装zerotier客户端
+### 3. 本地和服务器都安装zerotier客户端
 
 windows直接在官网下载安装即可。
 
@@ -96,7 +96,7 @@ sudo usermod -a -G zerotier-one $USER
 现在就可以尝试使用虚拟局域网的IP互相ping了，但是一般可能都有500ms以上的延迟。
 原因在于默认的路由服务器比较远，两台设备实际上不在同一局域网的话，每次的路由链路非常长。可通过配置一个moon节点，短路官方的路由路径，提升通信质量。
 
-4. 在具有公网IP的服务器上搭建moon节点
+### 4. 在具有公网IP的服务器上搭建moon节点
 
 moon节点作为路由的中间节点，需要保证其他机器可达，因此必须具备公网IP。
 
@@ -116,7 +116,7 @@ sudo mv ${machine-id}.moon moons.d/
 systemctl restart zerotier-one.service
 ```
 
-5. 在其他机器上启用moon
+### 5. 在其他机器上启用moon
 
 ```shell
 zerotier-cli listpeers # 检查节点，是否包括上述配置过的节点，通过机器id来识别
